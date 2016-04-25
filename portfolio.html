@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio - Barbara Robinson Studio</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/photobox.css">
+		<link rel="stylesheet" type="text/css" href="css/photobox.ie.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/jquery.photobox.js"></script>
+	</head>
+	<body>
+		<div class="container">
+		<div id="home"><a href="index.html">Home</a></div>
+		<div id="catmenu">
+			<div class="activecat" id="all" onclick="toggleCategory('all')">All Images</div>
+			<div id="series1" onclick="toggleCategory('series1')">Label Series</div>
+			<div id="series2" onclick="toggleCategory('series2')">Decorated Tailpieces</div>
+			<div id="series3" onclick="toggleCategory('series3')">Just Dang Pretty Pictures</div>
+		</div>
+		<p class="catdesc series1">The work featured here is what the artist calls her "label series," which combines her
+		abilities as portrait, graphic, and editorial artist. It gives voice to her political, satirical, and historical
+		opinions in a humorous and non-threatening way. These pieces, drawn on mat board in colored pencil, are inspired
+		by the advertisements of yesteryear that she greatly admires. By publishing these pieces into greeting cards,
+		magnets and the like, Barbara hopes to reach a wider audience.</p>
+		<div class="gallery">
+			<a class="series1 all" href="img/portfolio/barbsoup.png"><img src="img/portfolio/barbsoup-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/beelzedog.png"><img src="img/portfolio/beelzedog-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/beware.png"><img src="img/portfolio/beware-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/blamegame.png"><img src="img/portfolio/blamegame-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/cleopatra.png"><img src="img/portfolio/cleopatra-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/conductorsbaton.png"><img src="img/portfolio/conductorsbaton-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/earnfromurn.png"><img src="img/portfolio/earnfromurn-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/forensic.png"><img src="img/portfolio/forensic-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/genghis.png"><img src="img/portfolio/genghis-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/houndini.png"><img src="img/portfolio/houndini-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/invisiblewoman.png"><img src="img/portfolio/invisiblewoman-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/isobels.png"><img src="img/portfolio/isobels-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/letthemeatcake.png"><img src="img/portfolio/letthemeatcake-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/lots.png"><img src="img/portfolio/lots-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/medusa.png"><img src="img/portfolio/medusa-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/peace.png"><img src="img/portfolio/peace-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/polarland.png"><img src="img/portfolio/polarland-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/pontiuspilate.png"><img src="img/portfolio/pontiuspilate-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/responsibilities.png"><img src="img/portfolio/responsibilities-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/rotisseriechicken.png"><img src="img/portfolio/rotisseriechicken-thumb.png"></a>
+			<a class="series1 all" href="img/portfolio/tim.png"><img src="img/portfolio/tim-thumb.png"></a>
+      
+      <a class="series3 all" href="img/portfolio/2trees.png"><img src="img/portfolio/2trees-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/appletree.png"><img src="img/portfolio/appletree-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/cardinal.png"><img src="img/portfolio/cardinal-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/girlwhofoundvoice.png"><img src="img/portfolio/girlwhofoundvoice-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/isoviolin.png"><img src="img/portfolio/isoviolin-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/meredithhands.png"><img src="img/portfolio/meredithhands-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/orchid.png"><img src="img/portfolio/orchid-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/orchid2.png"><img src="img/portfolio/orchid2-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/pepper.png"><img src="img/portfolio/pepper-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/susiescat.png"><img src="img/portfolio/susiescat-thumb.png"></a>
+      <a class="series3 all" href="img/portfolio/tj.png"><img src="img/portfolio/tj-thumb.png"></a>
+		</div>
+		</div>
+		<script>
+		$(document).ready(function(){
+			$('.gallery').photobox('a',{ time:0, zoomable: false });
+		});
+		
+		function toggleCategory(domelement) {
+			if ($('#' + domelement).hasClass('activecat')) return;
+			$('.all').css('display', 'none');
+			$('.catdesc').css('display', 'none');
+			$('.' + domelement).css('display', 'block');
+			$('.activecat').removeClass('activecat');
+			$('#' + domelement).addClass('activecat');
+		}
+		</script>
+	</body>
+</html>
